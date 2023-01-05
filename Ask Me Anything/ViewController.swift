@@ -8,12 +8,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    let images = ["ball1", "ball2", "ball3", "ball4", "ball5"]
+    @IBOutlet var imageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func asked(_ sender: UIButton) {
+        imageView.image = UIImage(named: images.randomElement()!)
+    }
 }
-
